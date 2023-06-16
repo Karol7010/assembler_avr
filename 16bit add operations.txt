@@ -1,0 +1,16 @@
+#include <avr/io.h>
+    
+    .global add_asm
+    
+	add_asm:
+	    ldi r16,0b00000101
+	    ldi r17,0b11011100
+	    ldi r18,0b00000111
+	    ldi r19,0b01110001
+	    add r17,r19 //dodaje pierwsze 8bit
+	    adc r16,r18 //r16+r18+C (C-flaga Carry)
+	    ret //wynik to r16,r17
+	    
+
+//r16,r17=1500=00000101 11011100
+//r18,r19=1905=00000111 01110001

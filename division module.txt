@@ -1,0 +1,18 @@
+#include <avr/io.h>
+    
+    .global add_asm
+    
+	add_asm:
+	
+	    ldi r16,4
+	    ldi r17,15
+	    
+	    sub r16,r17
+	    BRCC koniec //jeżeli flaga przeniesienia jest 0, to koncze program 
+	    mov r17,r16 //przenoszę r16 do r17
+	    ldi r16,0
+	    sub r16,r17 //odejmuje 256-245
+	    
+	koniec:
+	nop
+	

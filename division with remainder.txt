@@ -1,0 +1,20 @@
+#include <avr/io.h>
+    
+    .global add_asm
+    
+	add_asm:
+	
+	    ldi r16,4
+	    ldi r17,15
+	    ldi r18,0
+	    ldi r19,1
+	    
+	    etykieta:
+		sub r17,r16
+		BRCS koniec //jeżeli carry jest zaświecona o kończy program
+		add r18,r19 //r18 to wynik r17 to reszta z dzielenia
+		jmp etykieta
+	    koniec:
+	    add r17,r16 //dodaje 4 by otrzymać resztę z dzielenia
+	    ret
+    

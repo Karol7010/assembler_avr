@@ -1,0 +1,8 @@
+#include <avr/io.h>
+    
+    .global add_asm
+    
+	add_asm:
+	
+	    ldi r16,184
+	    andi r16,0b11100111 //wygaszanie 3 i 4rtego bitu

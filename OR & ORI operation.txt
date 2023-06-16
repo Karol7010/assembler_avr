@@ -1,0 +1,19 @@
+#include <avr/io.h>
+    
+    .global add_asm
+    
+	add_asm:
+	
+	    ldi r16,184
+		ldi r17,0b10000001
+	    or r16,r17
+
+
+#include <avr/io.h>
+    
+    .global add_asm
+    
+	add_asm:
+	
+	    ldi r16,184
+	    ori r16,0b10000001

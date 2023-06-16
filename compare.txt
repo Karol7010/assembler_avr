@@ -1,0 +1,16 @@
+#include <avr/io.h>
+    
+    .global add_asm
+    
+	add_asm:
+	
+	    ldi r16,150
+	    ldi r17,150
+	    cp r16,r17 //porównanie (tak naprawdę odejmowanie)
+	    BREQ etykieta //sprawdza czy równe
+	    
+	    etykieta:
+		nop
+		nop
+	    ret
+    

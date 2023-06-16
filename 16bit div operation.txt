@@ -1,0 +1,17 @@
+#include <avr/io.h>
+    
+    .global add_asm
+    
+	add_asm:
+	
+	    ldi r16,0b00000101
+	    ldi r17,0b11011100
+	    ldi r18,0b00000111
+	    ldi r19,0b01110001
+	    sub r19,r17
+	    sbc r18,r16 
+	    ret //r18,r19 to wynik
+	    
+
+//r16,r17=1500=00000101 11011100
+//r18,r19=1905=00000111 01110001
